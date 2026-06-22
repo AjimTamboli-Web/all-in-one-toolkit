@@ -1,5 +1,6 @@
 // 1. Import Routes and Route from the router library
-import { Routes, Route } from 'react-router-dom'
+// 20. Notice we added 'Link' to our import here!
+import { Routes, Route, Link } from 'react-router-dom'
 
 // 11. IMPORT YOUR NEW COMPONENT
 // The './' means "look in the current folder, then go to components folder"
@@ -8,27 +9,54 @@ import WordCounter from './components/WordCounter'
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
   return (
-    <div>
-      <h1>My All-in-One Toolkit</h1>
+    <div style={{
+      display: 'flex', minHeight: '100vh',
+      fontFamily: 'sans-serif'
+    }}>
 
-      {/* 
+
+      {/* 21. --- THIS IS OUR SIDEBAR NAVIGATION --- */}
+      <nav style={{ width: '250px', background: '#1e1e2f', color: 'white', padding: '20px' }}>
+        <h2>Toolkit Pro</h2>
+
+        <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <li>
+            {/* Link replaces the standard HTML <a> tag */}
+            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>🏠 Home</Link>
+          </li>
+          <li>
+            <Link to="/word-counter" style={{ color: 'white', textDecoration: 'none' }}>📝 Word Counter</Link>
+          </li>
+        </ul>
+      </nav>
+
+      {/* 22--- THIS IS OUR MAIN CONTENT AREA --- */}
+      <main style={{ flex: 1, padding: '40px', background: '#f5f5f5' }}>
+
+        {/* 
         Routes acts like a switch statement. 
         It looks at the URL in the browser and decides what to show.
       */}
-      <Routes>
-        {/* When the URL is exacty "/" (the home page), show this text */}
-        <Route path="/" element={<p>Welcome to the Home Page! Tools will go here.</p>} />
+        <Routes>
+          {/* When the URL is exacty "/" (the home page), show this text */}
 
-        {/* We will add more routes here later, like: */}
-        {/* <Route path="/qr-code" element={<QRCodeGenerator />} /> */}
+          <Route path="/" element={
+            <div>
+              <h1> Welcome to the Home Page!</h1>
+              <p> Click a tool on the left to get started.</p>
+            </div>
+          } />
+
+          {/* We will add more routes here later, like: */}
+          {/* <Route path="/qr-code" element={<QRCodeGenerator />} /> */}
 
 
-        {/* 12. ADD THE ROUTE */}
-        {/* When the user goes to /word-counter in their browser, React will show the WordCounter component! */}
-        <Route path="/word-counter" element={<WordCounter />} />
+          {/* 12. ADD THE ROUTE */}
+          {/* When the user goes to /word-counter in their browser, React will show the WordCounter component! */}
+          <Route path="/word-counter" element={<WordCounter />} />
 
-      </Routes>
-
+        </Routes>
+      </main>
 
     </div>
   )
