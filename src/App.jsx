@@ -1,6 +1,10 @@
 // 1. Import Routes and Route from the router library
 import { Routes, Route } from 'react-router-dom'
 
+// 11. IMPORT YOUR NEW COMPONENT
+// The './' means "look in the current folder, then go to components folder"
+import WordCounter from './components/WordCounter'
+
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
   return (
@@ -17,7 +21,15 @@ export default function App() {
 
         {/* We will add more routes here later, like: */}
         {/* <Route path="/qr-code" element={<QRCodeGenerator />} /> */}
+
+
+        {/* 12. ADD THE ROUTE */}
+        {/* When the user goes to /word-counter in their browser, React will show the WordCounter component! */}
+        <Route path="/word-counter" element={<WordCounter />} />
+
       </Routes>
+
+
     </div>
   )
 }
