@@ -5,6 +5,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 // 11. IMPORT YOUR NEW COMPONENT
 // The './' means "look in the current folder, then go to components folder"
 import WordCounter from './components/WordCounter'
+import PasswordGenerator from './components/PasswordGenerator'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -26,6 +27,9 @@ export default function App() {
           </li>
           <li>
             <Link to="/word-counter" style={{ color: 'white', textDecoration: 'none' }}>📝 Word Counter</Link>
+          </li>
+          <li>
+            <Link to="/password-generator" style={{ color: 'white', textDecoration: 'none' }}> 🔐 Password Generator </Link>
           </li>
         </ul>
       </nav>
@@ -54,6 +58,8 @@ export default function App() {
           {/* 12. ADD THE ROUTE */}
           {/* When the user goes to /word-counter in their browser, React will show the WordCounter component! */}
           <Route path="/word-counter" element={<WordCounter />} />
+
+          <Route path="/password-generator" element={<PasswordGenerator />} />
 
         </Routes>
       </main>
