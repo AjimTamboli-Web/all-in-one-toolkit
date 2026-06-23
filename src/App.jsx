@@ -7,6 +7,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import WordCounter from './components/WordCounter'
 import PasswordGenerator from './components/PasswordGenerator'
 import AgeCalculator from './components/AgeCalculator'
+import QRCodeGenerator from './components/QRCodeGenerator'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -34,6 +35,9 @@ export default function App() {
           </li>
           <li>
             <Link to="/age-calculator" style={{ color: 'white', textDecoration: 'none' }}> 👶 Age Calculator </Link>
+          </li>
+          <li>
+            <Link to="/qr-code" style={{ color: 'white', textDecoration: 'none' }}> QR CODE Generator</Link>
           </li>
         </ul>
       </nav>
@@ -66,6 +70,8 @@ export default function App() {
           <Route path="/password-generator" element={<PasswordGenerator />} />
 
           <Route path="/age-calculator" element={<AgeCalculator />} />
+
+          <Route path="/qr-code" element={<QRCodeGenerator />} />
         </Routes>
       </main>
 
