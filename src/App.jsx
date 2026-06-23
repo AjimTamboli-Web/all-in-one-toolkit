@@ -6,6 +6,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 // The './' means "look in the current folder, then go to components folder"
 import WordCounter from './components/WordCounter'
 import PasswordGenerator from './components/PasswordGenerator'
+import AgeCalculator from './components/AgeCalculator'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -30,6 +31,9 @@ export default function App() {
           </li>
           <li>
             <Link to="/password-generator" style={{ color: 'white', textDecoration: 'none' }}> 🔐 Password Generator </Link>
+          </li>
+          <li>
+            <Link to="/age-calculator" style={{ color: 'white', textDecoration: 'none' }}> 👶 Age Calculator </Link>
           </li>
         </ul>
       </nav>
@@ -61,6 +65,7 @@ export default function App() {
 
           <Route path="/password-generator" element={<PasswordGenerator />} />
 
+          <Route path="/age-calculator" element={<AgeCalculator />} />
         </Routes>
       </main>
 
