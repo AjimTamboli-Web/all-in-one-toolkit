@@ -9,6 +9,7 @@ import PasswordGenerator from './components/PasswordGenerator'
 import AgeCalculator from './components/AgeCalculator'
 import QRCodeGenerator from './components/QRCodeGenerator'
 import SplitBill from './components/SplitBill'
+import EMICalculator from './components/EMICalculator'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -42,6 +43,9 @@ export default function App() {
           </li>
           <li>
             <Link to="/split-bill" style={{ color: 'white', textDecoration: 'none' }}> Split Bill</Link>
+          </li>
+          <li>
+            <Link to="/emi-calculator" style={{ color: 'white', textDecoration: 'none' }}> EMI Calculator </Link>
           </li>
         </ul>
       </nav>
@@ -78,6 +82,8 @@ export default function App() {
           <Route path="/qr-code" element={<QRCodeGenerator />} />
 
           <Route path="/split-bill" element={<SplitBill />} />
+
+          <Route path="/emi-calculator" element={<EMICalculator />} />
         </Routes>
       </main>
 
