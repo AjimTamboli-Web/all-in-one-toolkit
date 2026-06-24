@@ -8,6 +8,7 @@ import WordCounter from './components/WordCounter'
 import PasswordGenerator from './components/PasswordGenerator'
 import AgeCalculator from './components/AgeCalculator'
 import QRCodeGenerator from './components/QRCodeGenerator'
+import SplitBill from './components/SplitBill'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -38,6 +39,9 @@ export default function App() {
           </li>
           <li>
             <Link to="/qr-code" style={{ color: 'white', textDecoration: 'none' }}> QR CODE Generator</Link>
+          </li>
+          <li>
+            <Link to="/split-bill" style={{ color: 'white', textDecoration: 'none' }}> Split Bill</Link>
           </li>
         </ul>
       </nav>
@@ -72,6 +76,8 @@ export default function App() {
           <Route path="/age-calculator" element={<AgeCalculator />} />
 
           <Route path="/qr-code" element={<QRCodeGenerator />} />
+
+          <Route path="/split-bill" element={<SplitBill />} />
         </Routes>
       </main>
 
