@@ -10,6 +10,8 @@ import AgeCalculator from './components/AgeCalculator'
 import QRCodeGenerator from './components/QRCodeGenerator'
 import SplitBill from './components/SplitBill'
 import EMICalculator from './components/EMICalculator'
+import ColorPalette from './components/ColorPalette'
+
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -46,6 +48,9 @@ export default function App() {
           </li>
           <li>
             <Link to="/emi-calculator" style={{ color: 'white', textDecoration: 'none' }}> EMI Calculator </Link>
+          </li>
+          <li>
+            <Link to="/color-palette" style={{ color: 'white', textDecoration: 'none' }}> Color Palette</Link>
           </li>
         </ul>
       </nav>
@@ -84,6 +89,8 @@ export default function App() {
           <Route path="/split-bill" element={<SplitBill />} />
 
           <Route path="/emi-calculator" element={<EMICalculator />} />
+
+          <Route path="/color-palette" element={<ColorPalette />} />
         </Routes>
       </main>
 
