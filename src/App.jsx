@@ -11,7 +11,7 @@ import QRCodeGenerator from './components/QRCodeGenerator'
 import SplitBill from './components/SplitBill'
 import EMICalculator from './components/EMICalculator'
 import ColorPalette from './components/ColorPalette'
-
+import UnitConverter from './components/UnitConverter'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -52,6 +52,9 @@ export default function App() {
           <li>
             <Link to="/color-palette" style={{ color: 'white', textDecoration: 'none' }}> Color Palette</Link>
           </li>
+          <li>
+            <Link to="/unit-converter" style={{ color: 'white', textDecoration: 'none' }}> Unit Converter</Link>
+          </li>
         </ul>
       </nav>
 
@@ -91,6 +94,8 @@ export default function App() {
           <Route path="/emi-calculator" element={<EMICalculator />} />
 
           <Route path="/color-palette" element={<ColorPalette />} />
+
+          <Route path="/unit-converter" element={<UnitConverter />} />
         </Routes>
       </main>
 
