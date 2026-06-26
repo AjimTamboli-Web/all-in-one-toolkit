@@ -12,6 +12,7 @@ import SplitBill from './components/SplitBill'
 import EMICalculator from './components/EMICalculator'
 import ColorPalette from './components/ColorPalette'
 import UnitConverter from './components/UnitConverter'
+import JSONFormatter from './components/JSONFormatter'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -55,6 +56,9 @@ export default function App() {
           <li>
             <Link to="/unit-converter" style={{ color: 'white', textDecoration: 'none' }}> Unit Converter</Link>
           </li>
+          <li>
+            <Link to="/json-formatter" style={{ color: 'white', textDecoration: 'none' }}> JSON Formatter</Link>
+          </li>
         </ul>
       </nav>
 
@@ -96,6 +100,8 @@ export default function App() {
           <Route path="/color-palette" element={<ColorPalette />} />
 
           <Route path="/unit-converter" element={<UnitConverter />} />
+
+          <Route path="/json-formatter" element={<JSONFormatter />} />
         </Routes>
       </main>
 
