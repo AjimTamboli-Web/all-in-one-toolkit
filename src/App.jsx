@@ -14,6 +14,7 @@ import ColorPalette from './components/ColorPalette'
 import UnitConverter from './components/UnitConverter'
 import JSONFormatter from './components/JSONFormatter'
 import MetaTagGenerator from './components/MetaTagGenerator'
+import InvoiceGST from './components/InvoiceGST'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -63,6 +64,9 @@ export default function App() {
           <li>
             <Link to="/meta-tag-generator" style={{ color: 'white', textDecoration: 'none' }}> Meta Tag Generator</Link>
           </li>
+          <li>
+            <Link to="/invoice-gst" style={{ color: 'white', textDecoration: 'none' }}> Invoice & GST Calculator</Link>
+          </li>
         </ul>
       </nav>
 
@@ -108,6 +112,8 @@ export default function App() {
           <Route path="/json-formatter" element={<JSONFormatter />} />
 
           <Route path="/meta-tag-generator" element={<MetaTagGenerator />} />
+
+          <Route path="/invoice-gst" element={<InvoiceGST />} />
         </Routes>
       </main>
 
