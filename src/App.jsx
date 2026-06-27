@@ -15,6 +15,8 @@ import UnitConverter from './components/UnitConverter'
 import JSONFormatter from './components/JSONFormatter'
 import MetaTagGenerator from './components/MetaTagGenerator'
 import InvoiceGST from './components/InvoiceGST'
+import ImageCompressor from './components/ImageCompressor'
+
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -67,6 +69,9 @@ export default function App() {
           <li>
             <Link to="/invoice-gst" style={{ color: 'white', textDecoration: 'none' }}> Invoice & GST Calculator</Link>
           </li>
+          <li>
+            <Link to="/image-compressor" style={{ color: 'white', textDecoration: 'none' }}>Image Compressor</Link>
+          </li>
         </ul>
       </nav>
 
@@ -114,6 +119,8 @@ export default function App() {
           <Route path="/meta-tag-generator" element={<MetaTagGenerator />} />
 
           <Route path="/invoice-gst" element={<InvoiceGST />} />
+
+          <Route path="/image-compressor" element={<ImageCompressor />} />
         </Routes>
       </main>
 
