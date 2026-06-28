@@ -16,7 +16,7 @@ import JSONFormatter from './components/JSONFormatter'
 import MetaTagGenerator from './components/MetaTagGenerator'
 import InvoiceGST from './components/InvoiceGST'
 import ImageCompressor from './components/ImageCompressor'
-
+import PDFMerger from './components/PDFMerger'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -72,6 +72,9 @@ export default function App() {
           <li>
             <Link to="/image-compressor" style={{ color: 'white', textDecoration: 'none' }}>Image Compressor</Link>
           </li>
+          <li>
+            <Link to="/pdf-merger" style={{ color: 'white', textDecoration: 'none' }}>PDF Merger</Link>
+          </li>
         </ul>
       </nav>
 
@@ -121,6 +124,8 @@ export default function App() {
           <Route path="/invoice-gst" element={<InvoiceGST />} />
 
           <Route path="/image-compressor" element={<ImageCompressor />} />
+
+          <Route path="/pdf-merger" element={<PDFMerger />} />
         </Routes>
       </main>
 
