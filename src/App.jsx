@@ -17,6 +17,7 @@ import MetaTagGenerator from './components/MetaTagGenerator'
 import InvoiceGST from './components/InvoiceGST'
 import ImageCompressor from './components/ImageCompressor'
 import PDFMerger from './components/PDFMerger'
+import ResumeBuilder from './components/ResumeBuilder'
 
 // 2. Export our App function as the default export so main.jsx can use it
 export default function App() {
@@ -75,6 +76,9 @@ export default function App() {
           <li>
             <Link to="/pdf-merger" style={{ color: 'white', textDecoration: 'none' }}>PDF Merger</Link>
           </li>
+          <li>
+            <Link to="/resume-builder" style={{ color: 'white', textDecoration: 'none' }}>Resume Builder</Link>
+          </li>
         </ul>
       </nav>
 
@@ -126,6 +130,8 @@ export default function App() {
           <Route path="/image-compressor" element={<ImageCompressor />} />
 
           <Route path="/pdf-merger" element={<PDFMerger />} />
+
+          <Route path="/resume-builder" element={<ResumeBuilder />} />
         </Routes>
       </main>
 
