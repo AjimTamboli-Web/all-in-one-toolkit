@@ -20,6 +20,7 @@ import InvoiceGST from './components/InvoiceGST'
 import ImageCompressor from './components/ImageCompressor'
 import PDFMerger from './components/PDFMerger'
 import ResumeBuilder from './components/ResumeBuilder'
+import Footer from './components/Footer'
 
 export default function App() {
   // STATE: Is the sidebar open or closed? (Starts closed)
@@ -132,6 +133,10 @@ export default function App() {
         </main>
 
       </div>
+
+      {/* --- FOOTER --- */}
+      <Footer />
+
     </div>
   )
 }
