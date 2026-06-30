@@ -10,7 +10,7 @@
 
 | Home Dashboard | Tool Example |
 |:-:|:-:|
-| ![Home](https://img.shields.io/badge/Dashboard-iLovePDF_Style-blue?style=for-the-badge) | ![Tool](https://img.shields.io/badge/14_Tools-Built_In-green?style=for-the-badge) |
+| ![Home](./screenshots/home.png) | ![Tool](./screenshots/tool.png) |
 
 ---
 
